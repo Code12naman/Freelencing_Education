@@ -18,20 +18,39 @@ export const TeachingApproach: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#CBA34A]">
-              OUR METHODOLOGY
-            </span>
-            <span className="w-6 h-[1px] bg-[#CBA34A]" />
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 pb-6 border-b border-[#E6E7E9] gap-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#CBA34A]">
+                OUR METHODOLOGY
+              </span>
+              <span className="w-6 h-[1px] bg-[#CBA34A]" />
+            </div>
+
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#10243B] font-semibold tracking-tight">
+              A Structured Approach to Better Learning.
+            </h2>
+            <p className="text-sm sm:text-base text-[#737B85] mt-3 leading-relaxed">
+              Academic excellence is never accidental; it is the predictable outcome of an iterative 4-stage pedagogical continuum executed with discipline.
+            </p>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#10243B] font-semibold tracking-tight">
-            A Structured Approach to Better Learning.
-          </h2>
-          <p className="text-sm sm:text-base text-[#737B85] mt-3 leading-relaxed">
-            Academic excellence is never accidental; it is the predictable outcome of an iterative 4-stage pedagogical continuum executed with discipline.
-          </p>
+          {/* Authentic Whiteboard Teaching Photo Callout */}
+          <div className="lg:max-w-sm w-full">
+            <div className="relative rounded overflow-hidden border border-[#E6E7E9] bg-[#091829] shadow-subtle">
+              <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
+                alt="Authentic real photograph of science teacher explaining conceptual derivations on a classroom whiteboard"
+                className="w-full h-44 sm:h-48 object-cover filter saturate-[0.95] contrast-[1.03]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#091829]/90 via-transparent to-transparent flex items-end p-3">
+                <span className="text-[10px] text-gray-200 font-mono">
+                  ACTIVE INSTRUCTION // CONCEPT DECONSTRUCTION
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Desktop: Clean Horizontal Process Layout with Flow Indicators */}
@@ -107,4 +126,3 @@ export const TeachingApproach: React.FC = () => {
     </section>
   );
 };
-

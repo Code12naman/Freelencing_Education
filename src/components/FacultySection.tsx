@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FACULTY_SLOTS } from '../data/instituteData';
 import { FacultySlot } from '../types';
-import { UserCheck, Shield, Edit2, Check, BookOpen, Layers } from 'lucide-react';
+import { Shield, Edit2, Check } from 'lucide-react';
 
 export const FacultySection: React.FC = () => {
   const [facultyList, setFacultyList] = useState<FacultySlot[]>(FACULTY_SLOTS);
@@ -11,11 +11,13 @@ export const FacultySection: React.FC = () => {
     department: string;
     qualificationPlaceholder: string;
     teachingPhilosophy: string;
+    photoUrl: string;
   }>({
     subject: '',
     department: '',
     qualificationPlaceholder: '',
-    teachingPhilosophy: ''
+    teachingPhilosophy: '',
+    photoUrl: ''
   });
 
   const handleStartEdit = (faculty: FacultySlot) => {
@@ -24,7 +26,8 @@ export const FacultySection: React.FC = () => {
       subject: faculty.subject,
       department: faculty.department,
       qualificationPlaceholder: faculty.qualificationPlaceholder,
-      teachingPhilosophy: faculty.teachingPhilosophy
+      teachingPhilosophy: faculty.teachingPhilosophy,
+      photoUrl: faculty.photoUrl
     });
   };
 
@@ -36,7 +39,8 @@ export const FacultySection: React.FC = () => {
           subject: editFormData.subject,
           department: editFormData.department,
           qualificationPlaceholder: editFormData.qualificationPlaceholder,
-          teachingPhilosophy: editFormData.teachingPhilosophy
+          teachingPhilosophy: editFormData.teachingPhilosophy,
+          photoUrl: editFormData.photoUrl
         };
       }
       return item;
@@ -64,7 +68,7 @@ export const FacultySection: React.FC = () => {
 
           <div className="max-w-sm text-xs sm:text-sm text-[#737B85]">
             <p>
-              Under our institutional policy, faculty appointments are subject to rigorous peer review and academic verification before public profile publication.
+              Dedicated subject mentors providing continuous classroom instruction, individual doubt clearing, and analytical problem-solving training.
             </p>
           </div>
         </div>
@@ -77,38 +81,37 @@ export const FacultySection: React.FC = () => {
             return (
               <div 
                 key={faculty.id}
-                className="bg-[#FFFFFF] border border-[#E6E7E9] rounded overflow-hidden flex flex-col justify-between shadow-subtle hover:shadow-card transition-all duration-200"
+                className="bg-[#FFFFFF] border border-[#E6E7E9] rounded overflow-hidden flex flex-col justify-between shadow-subtle hover:shadow-card transition-all duration-200 group"
               >
                 <div>
-                  {/* Portrait Placeholder with Institutional Silhouette & Accent */}
-                  <div className="relative h-64 bg-[#091829] flex flex-col items-center justify-center p-6 border-b border-[#E6E7E9] text-center overflow-hidden">
-                    {/* Subtle geometric lines */}
-                    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#CBA34A_1px,transparent_1px)] [background-size:16px_16px]" />
-                    
-                    {/* Professional Academic Silhouette Placeholder */}
-                    <div className="w-24 h-24 rounded-full border-2 border-[#CBA34A]/40 bg-[#10243B] flex items-center justify-center text-[#CBA34A] mb-3 relative z-10 shadow-inner">
-                      <svg className="w-12 h-12 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                      </svg>
-                    </div>
+                  {/* Real 4:5 Portrait Photograph of Faculty Educator */}
+                  <div className="relative aspect-[4/5] bg-[#091829] overflow-hidden border-b border-[#E6E7E9]">
+                    <img
+                      src={faculty.photoUrl}
+                      alt={faculty.photoAlt}
+                      className="w-full h-full object-cover object-top filter saturate-[0.95] contrast-[1.03] transition-transform duration-500 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
 
-                    <div className="relative z-10">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#E2C77D] bg-[#10243B]/80 px-2.5 py-0.5 rounded border border-[#CBA34A]/20">
-                        {faculty.subject}
-                      </span>
-                    </div>
+                    {/* Subtle gradient overlay at bottom */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#091829]/90 via-[#091829]/15 to-transparent pointer-events-none" />
 
                     {/* Department Tag Overlay */}
-                    <div className="absolute top-3 left-3 text-[10px] font-mono text-gray-400">
-                      DEPT // 0{faculty.id.slice(-1) || '1'}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#E2C77D] bg-[#10243B]/80 px-2.5 py-1 rounded backdrop-blur-xs border border-[#CBA34A]/25">
+                        {faculty.subject}
+                      </span>
+                      <span className="text-[10px] font-mono text-gray-300">
+                        DEPT // 0{faculty.id.slice(-1) || '1'}
+                      </span>
                     </div>
 
                     {/* Edit Trigger for Institute Administrators */}
                     <button
                       onClick={() => isEditing ? handleSaveEdit(faculty.id) : handleStartEdit(faculty)}
-                      className="absolute top-3 right-3 text-[11px] text-[#CBA34A] hover:text-white bg-[#10243B]/90 hover:bg-[#10243B] p-1.5 rounded transition-colors flex items-center gap-1 border border-[#CBA34A]/30"
-                      title="Edit Profile Data (Institute Control)"
+                      className="absolute top-3 right-3 text-[11px] text-[#CBA34A] hover:text-white bg-[#10243B]/90 hover:bg-[#10243B] p-1.5 rounded transition-colors flex items-center gap-1 border border-[#CBA34A]/30 z-20"
+                      title="Edit Profile (Institute Control)"
+                      aria-label="Edit Profile"
                     >
                       {isEditing ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Edit2 className="w-3.5 h-3.5" />}
                     </button>
@@ -221,4 +224,3 @@ export const FacultySection: React.FC = () => {
     </section>
   );
 };
-

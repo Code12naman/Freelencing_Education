@@ -116,8 +116,8 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePrograms, onOpenEnquiry }) 
 
             <div className="relative bg-[#091829] rounded overflow-hidden shadow-card border border-[#E6E7E9]">
               <img
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80"
-                alt="Science students engaged in disciplined academic study at Vardhani Classes"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
+                alt="Authentic real photograph of Indian science and medical entrance students engaged in collaborative academic study"
                 className="w-full h-[440px] sm:h-[500px] object-cover object-center filter saturate-[0.95] contrast-[1.03] transition-transform duration-500 hover:scale-[1.02]"
                 loading="eager"
               />
@@ -139,7 +139,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePrograms, onOpenEnquiry }) 
             {/* Understated Institutional Accreditation Ribbon */}
             <div className="mt-4 flex items-center justify-between text-[11px] text-[#737B85] px-1 font-mono">
               <span>LOCATION: GWALIOR (M.P.)</span>
-              <span className="text-[#CBA34A]">ADMISSIONS OPEN</span>
+              <span className="text-[#CBA34A]">AUTHENTIC CLASSROOM PEDAGOGY</span>
             </div>
 
           </motion.div>

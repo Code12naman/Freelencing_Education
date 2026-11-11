@@ -1,6 +1,6 @@
 import React from 'react';
 import { REVIEWS_CHARTER } from '../data/instituteData';
-import { MessageSquare, HeartHandshake, CheckCircle2, Shield } from 'lucide-react';
+import { HeartHandshake } from 'lucide-react';
 
 export const ParentStudentReviews: React.FC = () => {
   return (
@@ -8,19 +8,37 @@ export const ParentStudentReviews: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#CBA34A]">
-              EXPERIENCE & TRUST
-            </span>
-            <span className="w-6 h-[1px] bg-[#CBA34A]" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end mb-14">
+          <div className="lg:col-span-8">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#CBA34A]">
+                EXPERIENCE & TRUST
+              </span>
+              <span className="w-6 h-[1px] bg-[#CBA34A]" />
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#10243B] font-semibold tracking-tight">
+              Student & Parent Experience.
+            </h2>
+            <p className="text-sm sm:text-base text-[#737B85] mt-3 leading-relaxed max-w-2xl">
+              {REVIEWS_CHARTER.invitationText}
+            </p>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#10243B] font-semibold tracking-tight">
-            Student & Parent Experience.
-          </h2>
-          <p className="text-sm sm:text-base text-[#737B85] mt-3 leading-relaxed">
-            {REVIEWS_CHARTER.invitationText}
-          </p>
+
+          <div className="lg:col-span-4">
+            <div className="relative rounded overflow-hidden border border-[#E6E7E9] bg-[#091829] shadow-subtle">
+              <img
+                src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80"
+                alt="Authentic real photograph of students studying together, discussing academic questions and preparing for examinations"
+                className="w-full h-40 object-cover filter saturate-[0.95]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#091829]/80 to-transparent flex items-end p-3">
+                <span className="text-[10px] text-gray-200 font-mono">
+                  AUTHENTIC STUDENT ENGAGEMENT
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Authentic Pillars Grid (Instead of fake 5-star reviews) */}
@@ -67,4 +85,3 @@ export const ParentStudentReviews: React.FC = () => {
     </section>
   );
 };
-

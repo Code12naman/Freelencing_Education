@@ -9,6 +9,7 @@ import { ResultsSection } from './components/ResultsSection';
 import { BatchSchedule } from './components/BatchSchedule';
 import { FeeStructure } from './components/FeeStructure';
 import { ParentStudentReviews } from './components/ParentStudentReviews';
+import { FAQSection } from './components/FAQSection';
 import { EnquirySection } from './components/EnquirySection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -73,7 +74,7 @@ export function App() {
         {/* Results & Student Progress Showcase (Authentic Registry) */}
         <ResultsSection />
 
-        {/* Batch Schedule */}
+        {/* Batch Schedule & Fee Structure */}
         <div id="schedule-fees">
           <BatchSchedule onOpenEnquiry={(batch) => handleOpenEnquiry(`Batch: ${batch}`)} />
           <FeeStructure onOpenEnquiry={(plan) => handleOpenEnquiry(`Fee Query: ${plan}`)} />
@@ -81,6 +82,9 @@ export function App() {
 
         {/* Student & Parent Experience Charter */}
         <ParentStudentReviews />
+
+        {/* Institutional Frequently Asked Questions */}
+        <FAQSection />
 
         {/* High-Conversion Admission Enquiry Section */}
         <EnquirySection initialSubject={enquirySubject} />
@@ -119,4 +123,3 @@ export function App() {
 }
 
 export default App;
-

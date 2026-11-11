@@ -1,4 +1,4 @@
-import { CourseProgram, BatchScheduleItem, FeeItem, FacultySlot, AchievementItem } from '../types';
+import { CourseProgram, BatchScheduleItem, FeeItem, FacultySlot } from '../types';
 
 export const INSTITUTE_INFO = {
   name: "Vardhani Classes",
@@ -49,8 +49,8 @@ export const PROGRAMS_DATA: CourseProgram[] = [
     batchSchedule: "Morning & Evening Options Available",
     idealFor: "Students stepping into senior secondary looking for deep conceptual grasp without memorisation shortcuts.",
     layoutVariant: "split-editorial",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Indian science student engaged in focused laboratory and academic study"
+    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Authentic photograph of science student focused on mathematical derivations and textbook study in library"
   },
   {
     id: "class-12-science",
@@ -76,8 +76,8 @@ export const PROGRAMS_DATA: CourseProgram[] = [
     batchSchedule: "Morning & Evening Batches",
     idealFor: "Class 12 students aiming for distinction in board exams alongside parallel competitive readiness.",
     layoutVariant: "featured-horizontal",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Focused students collaborating and solving problems in classroom"
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Authentic photograph of student preparing detailed examination notes with written scientific formulas"
   },
   {
     id: "neet-preparation",
@@ -103,8 +103,8 @@ export const PROGRAMS_DATA: CourseProgram[] = [
     batchSchedule: "Dedicated Morning & Evening Batches with Extended Doubt Labs",
     idealFor: "Medical aspirants targeting government medical colleges requiring discipline, accuracy, and depth.",
     layoutVariant: "curriculum-focus",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Medical and biological laboratory environment for academic study"
+    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Authentic photograph of biological research and science laboratory equipment for NEET medical preparation"
   },
   {
     id: "integrated-program",
@@ -131,7 +131,7 @@ export const PROGRAMS_DATA: CourseProgram[] = [
     idealFor: "Students aspiring for medical or premier science careers with an early, structured start.",
     layoutVariant: "integrated-flagship",
     image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Students in quiet library academic study environment"
+    imageAlt: "Authentic photograph of students engaged in disciplined study in an institutional academic hall"
   }
 ];
 
@@ -247,6 +247,8 @@ export const FACULTY_SLOTS: FacultySlot[] = [
     id: "dept-physics",
     subject: "Physics",
     department: "Department of Physical Sciences",
+    photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Senior Physics mentor with analytical teaching expertise",
     qualificationPlaceholder: "Senior Subject Mentor & Physics Lead",
     experiencePlaceholder: "Extensive background in competitive entrance pedagogy & conceptual mechanics",
     responsibilities: [
@@ -261,6 +263,8 @@ export const FACULTY_SLOTS: FacultySlot[] = [
     id: "dept-chemistry",
     subject: "Chemistry",
     department: "Department of Chemical Sciences",
+    photoUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Senior Chemistry mentor explaining organic mechanisms",
     qualificationPlaceholder: "Senior Chemistry Specialist",
     experiencePlaceholder: "Expertise in organic reaction mechanisms and physical chemistry stoichiometry",
     responsibilities: [
@@ -275,6 +279,8 @@ export const FACULTY_SLOTS: FacultySlot[] = [
     id: "dept-biology",
     subject: "Biology (Botany & Zoology)",
     department: "Department of Life Sciences",
+    photoUrl: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Medical entrance mentor specialized in NCERT Biology deconstruction",
     qualificationPlaceholder: "Senior Medical Entrance Mentor",
     experiencePlaceholder: "Specialized in NEET-UG curriculum, diagrammatic accuracy & biological taxonomies",
     responsibilities: [
@@ -289,6 +295,8 @@ export const FACULTY_SLOTS: FacultySlot[] = [
     id: "dept-maths",
     subject: "Mathematics",
     department: "Department of Mathematical Sciences",
+    photoUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Senior Mathematics instructor with calculus and algebra specialization",
     qualificationPlaceholder: "Senior Mathematics Instructor",
     experiencePlaceholder: "Calculus, coordinate geometry and algebraic reasoning specialist",
     responsibilities: [
@@ -324,3 +332,25 @@ export const REVIEWS_CHARTER = {
   ]
 };
 
+export const INSTITUTIONAL_FAQS = [
+  {
+    question: "How does Vardhani Classes synchronize coaching with regular school hours?",
+    answer: "We offer two distinct batches: a Morning Batch (7:00 AM – 11:00 AM) and an Evening Batch (4:00 PM – 8:00 PM). This flexibility allows students attending morning schools to enroll in the evening slot without physical exhaustion or timetable conflicts."
+  },
+  {
+    question: "How are CBSE Board requirements balanced with NEET-UG entrance preparation?",
+    answer: "Our curriculum is rooted in NCERT from day one. Board examinations demand rigorous subjective presentation and numerical derivation, while NEET requires rapid conceptual application. We run parallel subjective descriptive test series and timed OMR objective tests, ensuring students never have to compromise one for the other."
+  },
+  {
+    question: "What is the procedure if a student misses a lecture due to illness or school examinations?",
+    answer: "Every lecture topic is documented with curated conceptual study notes and Daily Practice Problems (DPPs). Missed concepts are addressed through dedicated backup doubt desks during Sunday academic review sessions (9:00 AM – 1:00 PM)."
+  },
+  {
+    question: "Are in-person doubt resolution sessions included in the tuition fee?",
+    answer: "Yes, absolutely. One-on-one doubt clearing with subject mentors is an integral component of our methodology and carries zero additional charges. Students have designated access to faculty desks before and after daily lectures."
+  },
+  {
+    question: "Can parents visit the institute in Gwalior before finalizing admission?",
+    answer: "We strongly encourage in-person center visits. Parents and students are welcome to meet our academic mentors, inspect printed study modules, review previous assessment frameworks, and discuss individual learning goals before admission."
+  }
+];

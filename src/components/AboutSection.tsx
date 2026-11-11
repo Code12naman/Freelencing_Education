@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check, BookOpen, Target, Users } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -23,12 +22,12 @@ export const AboutSection: React.FC = () => {
         {/* Two-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Left: Large Realistic Classroom / Educational Environment Photograph */}
+          {/* Left: Authentic Classroom Environment Photograph */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded overflow-hidden shadow-card border border-[#E6E7E9] bg-[#091829]">
               <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=80"
-                alt="Authentic study and academic seminar environment at Vardhani Classes"
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+                alt="Authentic real photograph of students seated at desks in a coaching institute classroom attending an academic lecture"
                 className="w-full h-[460px] sm:h-[520px] object-cover filter saturate-[0.9] contrast-[1.05]"
                 loading="lazy"
               />
@@ -118,4 +117,3 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
-

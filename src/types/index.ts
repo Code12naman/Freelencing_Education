@@ -43,6 +43,8 @@ export interface FacultySlot {
   id: string;
   subject: string;
   department: string;
+  photoUrl: string;
+  photoAlt: string;
   qualificationPlaceholder: string;
   experiencePlaceholder: string;
   responsibilities: string[];
@@ -77,4 +79,3 @@ export interface FormSubmissionState {
   errorMessage: string | null;
   submittedData: EnquiryFormData | null;
 }
-
