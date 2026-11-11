@@ -77,3 +77,4 @@ export interface FormSubmissionState {
   errorMessage: string | null;
   submittedData: EnquiryFormData | null;
 }
+

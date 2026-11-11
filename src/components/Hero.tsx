@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Compass, CheckCircle2, PhoneCall } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Compass, PhoneCall } from 'lucide-react';
 import { INSTITUTE_INFO } from '../data/instituteData';
 
 interface HeroProps {
@@ -23,7 +24,12 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePrograms, onOpenEnquiry }) 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Editorial Typography & Actions */}
-          <div className="lg:col-span-7 space-y-7">
+          <motion.div 
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-7 space-y-7"
+          >
             
             {/* Eyebrow with gold accent bar */}
             <div className="inline-flex items-center gap-3">
@@ -95,11 +101,15 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePrograms, onOpenEnquiry }) 
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Column: Professional Art-Directed Editorial Image */}
-          <div className="lg:col-span-5 relative">
-            
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="lg:col-span-5 relative"
+          >
             {/* Restrained Gold Geometric Frame Accent */}
             <div className="absolute -top-3 -right-3 w-32 h-32 border-t-2 border-r-2 border-[#CBA34A]/40 pointer-events-none hidden sm:block" />
             <div className="absolute -bottom-3 -left-3 w-32 h-32 border-b-2 border-l-2 border-[#CBA34A]/40 pointer-events-none hidden sm:block" />
@@ -132,7 +142,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePrograms, onOpenEnquiry }) 
               <span className="text-[#CBA34A]">ADMISSIONS OPEN</span>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
       </div>

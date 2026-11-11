@@ -88,3 +88,4 @@ export const submitAdmissionEnquiry = async (formData: EnquiryFormData): Promise
     };
   }
 };
+

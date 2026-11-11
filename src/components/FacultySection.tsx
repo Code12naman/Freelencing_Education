@@ -221,3 +221,4 @@ export const FacultySection: React.FC = () => {
     </section>
   );
 };
+

@@ -40,3 +40,4 @@ const EnquirySchema: Schema = new Schema(
 );
 
 export const Enquiry = mongoose.model<IEnquiry>('Enquiry', EnquirySchema);
+

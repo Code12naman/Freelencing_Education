@@ -52,3 +52,4 @@ enquiryRouter.get('/', async (_req: Request, res: Response): Promise<void> => {
     res.status(500).json({ success: false, message: 'Could not fetch records.' });
   }
 });
+

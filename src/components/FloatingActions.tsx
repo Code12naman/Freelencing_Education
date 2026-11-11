@@ -42,3 +42,4 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ onOpenEnquiry 
     </aside>
   );
 };
+

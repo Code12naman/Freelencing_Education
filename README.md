@@ -131,3 +131,4 @@ npm run dev
 3. Framework preset: **Vite**.
 4. Output directory: `dist`.
 5. Deploy!
+

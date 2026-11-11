@@ -422,3 +422,4 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onSelectProgra
     </section>
   );
 };
+

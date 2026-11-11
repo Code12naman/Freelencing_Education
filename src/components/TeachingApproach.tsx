@@ -107,3 +107,4 @@ export const TeachingApproach: React.FC = () => {
     </section>
   );
 };
+

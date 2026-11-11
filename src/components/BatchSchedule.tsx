@@ -133,3 +133,4 @@ export const BatchSchedule: React.FC<BatchScheduleProps> = ({ onOpenEnquiry }) =
     </section>
   );
 };
+

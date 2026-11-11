@@ -155,3 +155,4 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEnquiry, onSelectProgram }
     </footer>
   );
 };
+

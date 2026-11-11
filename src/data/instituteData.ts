@@ -323,3 +323,4 @@ export const REVIEWS_CHARTER = {
     { title: "Consistent Academic Environment", desc: "A disciplined, distraction-free atmosphere built around consistent study habits." }
   ]
 };
+
