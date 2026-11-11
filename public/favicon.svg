@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="8" fill="#10243B" />
+  <!-- Open Book Emblem with subtle gold touch -->
+  <path d="M24 16C21.2 13.5 17 13 13 14.5V33.5C17 32 21.2 32.5 24 35C26.8 32.5 31 32 35 33.5V14.5C31 13 26.8 13.5 24 16Z" stroke="#CBA34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 16V35" stroke="#CBA34A" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="24" cy="11.5" r="1.5" fill="#CBA34A" />
+</svg>
